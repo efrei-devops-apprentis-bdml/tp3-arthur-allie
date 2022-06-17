@@ -1,5 +1,4 @@
 
-
 ## DEVOPS - TP3 - DOCKER
 ## ARTHUR ALLIE - EFREI - M1 BDIA APP
 
@@ -141,7 +140,7 @@ CMD ["python3", "main.py"]
 *-> Je renseigne le numéro de port auquel je veux me connecter : **EXPOSE 80***
 
 - #### Modification de mon fichier "main.py" :
-##### - Dans mon fichier **"main.py"**, je  renseigne les paramètres **"host"** et **"port"** de l'**"app.run"** : 
+##### - Dans mon fichier **"main.py"**, je  renseigne les paramètres *"host"* et *"port"* de l'*"app.run"* : 
 ````python
 import os
 import requests
@@ -191,7 +190,7 @@ if __name__ == '__main__':
 
 ----
 
-### 3. Vérification de la création de la ressource sur le portal Azure: 
+### 3. Vérification de la création de la ressource sur le portal Azure : 
 ##### - Aller sur https://portal.azure.com/#home 
 ##### - Puis aller dans : *"settings"* -> *"Filtre d’abonnement par défaut"* -> *"Efrei - Apprentis BDML"*
 ##### - Chercher *"Instances de conteneur"* dans la barre de recherche -> connexion au groupe de ressources "devops-TP3"

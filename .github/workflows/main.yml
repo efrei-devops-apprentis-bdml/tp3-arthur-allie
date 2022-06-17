@@ -41,5 +41,8 @@ jobs:
           registry-username: ${{ secrets.REGISTRY_USERNAME }}
           registry-password: ${{ secrets.REGISTRY_PASSWORD }}
           environment-variables: API_KEY=${{ secrets.API_KEY }}
+          azcliversion: 2.30.0
+          inlineScript: |
+            az container create --resource-group ${{ secrets.RESOURCE_GROUP }} --image ${{ secrets.REGISTRY_LOGIN_SERVER }}/20210311:v1 --dns-name-label devops-20210311 --registry-login-server ${{ secrets.REGISTRY_LOGIN_SERVER }} --registry-username ${{ secrets.REGISTRY_USERNAME }} --registry-password ${{ secrets.REGISTRY_PASSWORD }} --secure-environment-variables API_KEY=${{ secrets.API_KEY }} --location 'france central' --ports 80 -f probe.yml
           name: '20210311'
           location: 'france central'

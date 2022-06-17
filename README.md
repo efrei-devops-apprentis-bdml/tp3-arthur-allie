@@ -178,7 +178,7 @@ if __name__ == '__main__':
 
 
 -> *Après avoir ajouté cet API KEY dans mes secrets et modifié mes fichiers **Dockerfile** et **main.py**, mon image a bien été envoyée sur le portal Azure, à l'adresse suivante : https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.ContainerInstance%2FcontainerGroups*
--> *Les différentes étapes de ce processus d'envoi sont :*
+-> *Les différentes étapes de ce processus d'envoi du GitHub Actions workflow sont :*
 - Set up job
 - Check out the repo
 - Login via Azure CLI
@@ -324,7 +324,7 @@ jobs:
 ````
 *-> Ceci me permet :*
 - De vérifier que mon **Dockerfile** est correctement rédigé (respect des bonnes pratiques)
-- Ceci se vérifie avec l'ajout de la ligne ***"Run hadolint/hadolint-action@v2.0.0"*** dans les étapes d'envoi du GitHub Action workflow
+- Ceci se vérifie avec l'ajout de la ligne ***"Run hadolint/hadolint-action@v2.0.0"*** dans les étapes d'envoi du GitHub Action workflow (cf ci-dessus)
 
 ----
 

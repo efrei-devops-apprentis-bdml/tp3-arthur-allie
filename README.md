@@ -124,13 +124,18 @@ jobs:
 - #### Modification de mon fichier "Dockerfile" :
 ##### - Dans mon fichier **"Dockerfile"**, je renseigne le paramètre de port **"Expose"** : 
 ````bash
-13 lines (7 sloc) 201 Bytes
 FROM python:3.11.0a7-alpine3.15
+
 WORKDIR /app
+
 COPY requirements.txt requirements.txt
+
 RUN pip3 install --no-cache-dir -r requirements.txt
+
 COPY . .
+
 EXPOSE 80
+
 CMD ["python3", "main.py"]
 ````
 *-> Je renseigne le numéro de port auquel je veux me connecter : **EXPOSE 80***

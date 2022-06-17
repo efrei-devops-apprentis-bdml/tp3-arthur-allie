@@ -263,14 +263,14 @@ curl "http://devops-20210311.francecentral.azurecontainer.io/?lat=5.902785&lon=1
 
 ### Bonus : 
 ### 1. Add hadolint to GitHub workflow : 
-##### - Dans mon fichier, j'ajoute les lignes de commandes suivantes : 
+##### - Dans mon fichier *"main.yml"*, j'ajoute les lignes de commandes suivantes : 
 ````bash
       -
         uses: hadolint/hadolint-action@v2.0.0
         with:
           dockerfile: Dockerfile          
 ````
- *-> Le fichier **Dockerfile** devient :*
+ *-> Ce fichier devient :*
   ````bash
 name: GitAction - Azure CI
 

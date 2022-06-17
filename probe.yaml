@@ -1,23 +1,22 @@
-apiVersion: 2019-12-01
-location: eastus
+apiVersion: 2022-06-17
+location: 'france central'
 name: livenesstest
 properties:
   containers:
-  - name: mycontainer
+  - name: 20210311
     properties:
-      image: mcr.microsoft.com/oss/nginx/nginx:1.15.5-alpine
-      ports: []
+      image: efreidevops.azurecr.io/20210311:v1
       resources:
         requests:
           cpu: 1.0
           memoryInGB: 1.5
       livenessProbe:
-        exec:
-            command:
-                - "cat"
-                - "/tmp/healthy"
+        httpGet:
+          path: /health
         periodSeconds: 5
   osType: Linux
   restartPolicy: Always
+  ipAddress:
+    type: Public
 tags: null
 type: Microsoft.ContainerInstance/containerGroups

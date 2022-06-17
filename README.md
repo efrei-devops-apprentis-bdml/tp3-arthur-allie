@@ -366,5 +366,5 @@ inlineScript: |
           
 ````
 
-*-> Ceci me permet de : m'assurer que la reprise d'un conteneur par un autre conteneur se fera correctement si ce premier conteneur ne fonctionne plus.*
+*-> Ceci me permet de m'assurer que la reprise d'un conteneur par un autre conteneur se fera correctement si ce premier conteneur ne fonctionne plus.*
 *-> Ici, le problème suivant se pose : Azure CLI ne me permet pas d'enregistrer les différents secrets ci-dessus dans mon repository Github.*

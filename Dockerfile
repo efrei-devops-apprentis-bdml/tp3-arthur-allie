@@ -8,4 +8,6 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+EXPOSE : 80
+
 CMD ["python3", "main.py"]

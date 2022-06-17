@@ -38,5 +38,5 @@ jobs:
           environment-variables: API_KEY=${{ secrets.API_KEY }}
           name: '20210311'
           ports:
-              80
+              8081
           location: 'france central'

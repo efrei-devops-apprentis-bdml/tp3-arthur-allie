@@ -1,0 +1,23 @@
+apiVersion: 2019-12-01
+location: eastus
+name: livenesstest
+properties:
+  containers:
+  - name: mycontainer
+    properties:
+      image: mcr.microsoft.com/oss/nginx/nginx:1.15.5-alpine
+      ports: []
+      resources:
+        requests:
+          cpu: 1.0
+          memoryInGB: 1.5
+      livenessProbe:
+        exec:
+            command:
+                - "cat"
+                - "/tmp/healthy"
+        periodSeconds: 5
+  osType: Linux
+  restartPolicy: Always
+tags: null
+type: Microsoft.ContainerInstance/containerGroups
